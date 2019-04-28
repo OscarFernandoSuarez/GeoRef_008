@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Mobiliario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+        <agm-map (mapClick)="agregarMarcador($event)" [latitude]="lat" [longitude]="lng" [zoom]='16'>
+        </agm-map>
+      </ion-card>
+
+      <ion-item> 
+        <ion-icon slot="start" color="primary" name="map"></ion-icon>
+        <ion-label>Mobiliario</ion-label>
+      </ion-item>
+      <ion-item>
+          <ion-label>Estado</ion-label>
+        </ion-item>
+      <ion-item>
+          <ion-select placeholder="Seleccione estado">
+            <ion-select-option value="B">Bueno</ion-select-option>
+            <ion-select-option value="R">Regular</ion-select-option>
+            <ion-select-option value="M">Malo</ion-select-option>
+          </ion-select>
+       </ion-item>
+       <ion-item>
+          <ion-label>Altura aproximada</ion-label>
+        </ion-item>
+      <ion-item>
+          <ion-select placeholder="Seleccione altura">
+            <ion-select-option value="A">Alto</ion-select-option>
+            <ion-select-option value="M">Medio</ion-select-option>
+            <ion-select-option value="B">Bajo</ion-select-option>
+          </ion-select>
+       </ion-item>
+       <ion-item>
+          <ion-label>Anotaciones</ion-label>
+        </ion-item>
+      <ion-item>
+          <ion-textarea placeholder="Agrega tus anotaciones"></ion-textarea>
+       </ion-item>
+       <ion-item>
+          <ion-label>Ingresa tus imágenes de evidencia</ion-label>
+        </ion-item>
+      <ion-item>
+          <ion-grid>
+              <ion-row>
+                <ion-col>
+                  ion-col
+                </ion-col>
+                <ion-col>
+                  ion-col
+                </ion-col>
+                <ion-col>
+                  ion-col
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+       </ion-item>
+        <ion-footer>
+          <ion-button color="primary" expand="block" routerLink="/home">
+            Guardar
+          </ion-button>
+        </ion-footer>
+</ion-content>
+
+<ion-footer>
+    <ion-button color="primary" routerLink="/home">Vuelve a Inicio</ion-button>
+</ion-footer>

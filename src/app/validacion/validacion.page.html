@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-img src="/assets/img/Grupo 1161@2x.png" width="70%" height="50%"></ion-img>
+    <form #forma= "ngForm"> 
+      <ion-list>  
+        <ion-item > 
+          <ion-label>Correo electrónico </ion-label> 
+          <ion-input type = "email" required ngModel #email = "ngModel" name = "email" placeholder = "" maxLength = "200" minLength ="3" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ></ion-input> 
+        </ion-item>
+        <ion-item id> 
+            <ion-label>Contraseña </ion-label> 
+            <ion-input type = "password" required ngModel #password = "ngModel" name = "password" placeholder = "" maxLength = "200" minLength ="3"></ion-input> 
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-button expand="full" fill="solid" [disabled] = "!forma.valid" (click)="login(forma)"> Ingreso</ion-button>
+      </ion-list>
+    </form>
+            
+          <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></ion-input> --> 
+       
+       
+    <!-- <div class="list">  <label class="item item-input">    
+        <span class="input-label">Email</span>       
+        <input type="email" ng-model="email">
+
+          </label>      <label class="item item-input">
+          <span class="input-label">Password</span>       
+            <input type="password" ng-model="password"  ng-minlength="3">
+                        </label>   
+                        
+            <div class="padding">
+                <button ng-disabled="!email || !password"  class="button button-block button-positive">Sign In</button> 
+                      </div>
+                    </div>  -->
+</ion-content>
+
+

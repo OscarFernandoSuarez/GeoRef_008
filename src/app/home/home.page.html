@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-list>
+     <ion-item>
+       <ion-label>
+        Selecciona el parque al cual vas a realizar el inventario de acuerdo a tu ubicación
+       </ion-label>
+     </ion-item>
+     <ion-card *ngFor="let item of parques" (click)="selectionPark()">
+        <ion-item >
+            <ion-avatar slot="start">
+                <ion-img src="../assets/img/{{item.foto}}"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>{{item.Name }}</h2>
+              {{ item.Description}}
+            </ion-label>
+        </ion-item>
+      </ion-card>
+   <!--   <ion-card>
+        <ion-item>
+            <ion-avatar slot="start">
+                <ion-img src="../../assets/img/img1.png"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>{{ parques.Name }}</h2>
+              {{ parques.Description}}
+            </ion-label>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+            <ion-avatar slot="start">
+                <ion-img src="../../assets/img/parqueNovios.jpg"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>{{ parques.Name }}</h2>
+              {{ parques.Description}}
+            </ion-label>
+        </ion-item>
+      </ion-card> -->
+   </ion-list>
+
+   <ion-footer>
+    
+      <!-- <ion-button color="primary" routerLink="/agregarinventario">Agregar Inventario</ion-button> -->
+  
+  </ion-footer>
+
+  
+
+</ion-content>

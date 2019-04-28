@@ -1,0 +1,7 @@
+{
+  "name": "GeoRef",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
